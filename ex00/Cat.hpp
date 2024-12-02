@@ -6,7 +6,7 @@
 /*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 23:51:05 by luifer            #+#    #+#             */
-/*   Updated: 2024/12/03 00:03:33 by luifer           ###   ########.fr       */
+/*   Updated: 2024/12/03 00:19:30 by luifer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 #define GREEN "\e[1;92m"
 #define RESET "\033[0m"
 
-class Cat : virtual public Animal
+class Cat : public Animal
 {
     public:
         Cat();

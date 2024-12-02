@@ -6,7 +6,7 @@
 /*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 00:06:31 by luifer            #+#    #+#             */
-/*   Updated: 2024/12/03 00:09:55 by luifer           ###   ########.fr       */
+/*   Updated: 2024/12/03 00:27:39 by luifer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,21 @@
 #include "Cat.hpp"
 
 int main(){
-    Dog dog;
-    Cat cat;
+    Animal* animal1 = new Animal();
+    Animal* animal2 = new Cat();
+    Animal* animal3 = new Dog();
+    std::cout << "\n";
 
-    std::cout << BLUE << " Dog make a sound" << RESET << std::endl;
-    dog.makeSound();
-    std::cout << BLUE << " Now you cat make a sound" << RESET << std::endl;
-    cat.makeSound();
-    return (0);
+    std::cout << BLUE << animal1->getType() << RESET << std::endl;
+    animal1->makeSound();
+    std::cout << BLUE << animal2->getType() << RESET << std::endl;
+    animal2->makeSound();
+    std::cout << BLUE << animal3->getType() << RESET << std::endl;
+    animal3->makeSound();
+    std::cout << "\n";
+
+    delete animal1;
+    delete animal2;
+    delete animal3;
+    return 0;
 }

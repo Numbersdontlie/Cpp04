@@ -6,7 +6,7 @@
 /*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 23:19:41 by luifer            #+#    #+#             */
-/*   Updated: 2024/12/02 23:41:34 by luifer           ###   ########.fr       */
+/*   Updated: 2024/12/03 00:28:51 by luifer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ class Animal
         virtual ~Animal();
 
         //pure virtual function
-        virtual void makeSound() const =0;
+        virtual void makeSound() const;
         std::string getType() const;
 };
 

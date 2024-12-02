@@ -6,7 +6,7 @@
 /*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 23:24:23 by luifer            #+#    #+#             */
-/*   Updated: 2024/12/02 23:41:37 by luifer           ###   ########.fr       */
+/*   Updated: 2024/12/03 00:30:06 by luifer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,9 @@ Animal::~Animal(){
 }
 
 //Function to make sound
-void Animal::makeSound(){
+void Animal::makeSound() const{
     std::cout << GREEN << " Animal sound" << RESET << std::endl;
 }
 
 //Getter of type
-std::string Animal::getType() const{return(this->type);}
+std::string Animal::getType() const {return(this->_type);}
