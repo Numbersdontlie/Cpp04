@@ -6,7 +6,7 @@
 /*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 12:03:59 by luifer            #+#    #+#             */
-/*   Updated: 2024/12/03 12:20:18 by luifer           ###   ########.fr       */
+/*   Updated: 2024/12/03 12:35:51 by luifer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ WrongCat::WrongCat(const WrongCat& input) : WrongAnimal(input){
 
 //Operator overload constructor
 WrongCat& WrongCat::operator=(const WrongCat& input){
-	if (this != input)
+	if (this != &input)
 		WrongAnimal::operator=(input);
 	std::cout << BLUE << " WrongCat object from operator overload constructor created " << RESET << std::endl;
 	return (*this);

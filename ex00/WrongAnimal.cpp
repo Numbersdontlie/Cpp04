@@ -6,7 +6,7 @@
 /*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 11:40:49 by luifer            #+#    #+#             */
-/*   Updated: 2024/12/03 12:02:03 by luifer           ###   ########.fr       */
+/*   Updated: 2024/12/03 12:36:56 by luifer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@ WrongAnimal::WrongAnimal() : _type("Monkey"){
 }
 
 //Copy constructor
-WrongAnimal::WrongAnimal(const WrongAnimal& input){
+WrongAnimal::WrongAnimal(const WrongAnimal& input) : _type(input._type) {
     _type = input._type;
     std::cout << BLUE << " 🦧 🦧 🦧 Wrong Monkey with Copy constructor created " << RESET << std::endl;
 }
 
 //Overload constructor
 WrongAnimal& WrongAnimal::operator=(const WrongAnimal& input){
-	if(this != input)
+	if(this != &input)
 		_type = input._type;
 	std::cout << BLUE << " 🦧 🦧 🦧 Wrong Monkey with Overload constructor created " << RESET << std::endl;
 	return (*this);
