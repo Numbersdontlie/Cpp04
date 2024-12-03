@@ -6,7 +6,7 @@
 /*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 23:37:49 by luifer            #+#    #+#             */
-/*   Updated: 2024/12/03 11:34:44 by luifer           ###   ########.fr       */
+/*   Updated: 2024/12/03 18:35:17 by luifer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <iostream>
 #include <string>
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 #define BLUE "\e[1;94m"
 #define RED "\e[1;91m"
@@ -24,6 +25,9 @@
 
 class Dog : public Animal
 {
+    private:
+        Brain* _brain;
+
     public:
         Dog();
         Dog(const Dog& input);
@@ -31,6 +35,8 @@ class Dog : public Animal
         ~Dog();
 
         void makeSound() const;
+        void setBrainIdea(std::string idea, int n);
+        std::string getBrainIdea(int n) const;
 };
 
 #endif
