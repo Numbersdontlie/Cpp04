@@ -6,7 +6,7 @@
 /*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 12:03:59 by luifer            #+#    #+#             */
-/*   Updated: 2024/12/03 13:28:42 by luifer           ###   ########.fr       */
+/*   Updated: 2024/12/03 16:06:36 by luifer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,5 @@ WrongCat::~WrongCat(){
 }
 
 void WrongCat::makeSound() const{
-	std::cout << GREEN << " 🦍 🦍 🦍 Wrong Cat says: HU HU HU HU HA HA HA HA" << RESET << std::endl;
+	std::cout << GREEN << " 🦍 🦍 🦍 Wrong Cat says: HU HU HU HU HA HA HA HA, it't that a MonkeyCat? XD " << RESET << std::endl;
 }
