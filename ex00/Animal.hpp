@@ -6,15 +6,15 @@
 /*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 23:19:41 by luifer            #+#    #+#             */
-/*   Updated: 2024/12/03 00:28:51 by luifer           ###   ########.fr       */
+/*   Updated: 2024/12/03 11:16:45 by luifer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ANIMAL_HPP
 # define ANIMAL_HPP
 
-# include <iostream>
-# include <string>
+#include <iostream>
+#include <string>
 
 #define BLUE "\e[1;94m"
 #define RED "\e[1;91m"

@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/02 23:51:05 by luifer            #+#    #+#             */
-/*   Updated: 2024/12/03 11:24:57 by luifer           ###   ########.fr       */
+/*   Created: 2024/12/03 11:37:29 by luifer            #+#    #+#             */
+/*   Updated: 2024/12/03 11:48:06 by luifer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
 #include <iostream>
 #include <string>
@@ -22,14 +22,15 @@
 #define GREEN "\e[1;92m"
 #define RESET "\033[0m"
 
-class Cat : public Animal
+class WrongAnimal : public Animal
 {
     public:
-        Cat();
-        Cat(const Cat& input);
-        Cat& operator=(const Cat& input);
-        ~Cat();
+        WrongAnimal();
+        WrongAnimal(const WrongAnimal& input);
+        WrongAnimal& operator=(const WrongAnimal& input);
+        ~WrongAnimal();
 
+        std::string getType() const;
         void makeSound() const;
 };
 

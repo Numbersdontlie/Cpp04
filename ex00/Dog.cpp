@@ -6,15 +6,14 @@
 /*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 23:14:01 by luifer            #+#    #+#             */
-/*   Updated: 2024/12/03 00:19:06 by luifer           ###   ########.fr       */
+/*   Updated: 2024/12/03 11:36:52 by luifer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "Dog.hpp"
 
 //Default constructor
-Dog::Dog() : Animal() {
-    this->_type = "Dog";
+Dog::Dog() : Animal() : _type("Dog") {
     std::cout << BLUE << " 🐶 🐶 🐶 Dog with default constructor created " << RESET << std::endl;
 }
 
@@ -25,9 +24,8 @@ Dog::Dog(const Dog& input) : Animal(input), {
 
 //Overload constructor
 Dog& Dog::operator=(const Dog& input){
-    if(this == input)
-        return (*this);
-    Animal::operator=(input);
+    if(this != input)
+        _type = input._type;
     std::cout << BLUE << " 🐶 🐶 🐶 Dog with overload constructor created " << RESET << std::endl;
     return (*this);
 }

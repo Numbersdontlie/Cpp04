@@ -6,15 +6,16 @@
 /*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 23:37:49 by luifer            #+#    #+#             */
-/*   Updated: 2024/12/03 00:16:10 by luifer           ###   ########.fr       */
+/*   Updated: 2024/12/03 11:34:44 by luifer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DOG_HPP
 # define DOG_HPP
 
-# include <iostream>
-# include <string>
+#include <iostream>
+#include <string>
+#include "Animal.hpp"
 
 #define BLUE "\e[1;94m"
 #define RED "\e[1;91m"
@@ -29,7 +30,7 @@ class Dog : public Animal
         Dog& operator=(const Dog& input);
         ~Dog();
 
-        void makeSound();
+        void makeSound() const;
 };
 
 #endif
