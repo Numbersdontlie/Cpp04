@@ -6,16 +6,13 @@
 /*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 00:06:31 by luifer            #+#    #+#             */
-/*   Updated: 2024/12/03 16:45:29 by luifer           ###   ########.fr       */
+/*   Updated: 2024/12/03 20:15:04 by luifer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
-#include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
-#include "Brain.hpp"
 
 int main(){
 	//Basic test
@@ -38,5 +35,8 @@ int main(){
 		animals[i]->makeSound();
 	}
 	std::cout << "\n";
+	for(int i = 0; i < num; i++){
+		delete animals[i];
+	}
 	return 0;
 }
