@@ -8,11 +8,11 @@ CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -Wshadow -std=c++98
 
-SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp
+SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
 
 OBJS = $(SRC:.cpp=.o)
 
-%.o: %.cpp Animal.hpp Cat.hpp Dog.hpp
+%.o: %.cpp Animal.hpp Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
