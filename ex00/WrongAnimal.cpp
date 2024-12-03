@@ -6,7 +6,7 @@
 /*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 11:40:49 by luifer            #+#    #+#             */
-/*   Updated: 2024/12/03 12:36:56 by luifer           ###   ########.fr       */
+/*   Updated: 2024/12/03 13:27:17 by luifer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ WrongAnimal::WrongAnimal() : _type("Monkey"){
 }
 
 //Copy constructor
-WrongAnimal::WrongAnimal(const WrongAnimal& input) : _type(input._type) {
-    _type = input._type;
+WrongAnimal::WrongAnimal(const WrongAnimal& input) : Animal(input), _type(input._type) {
     std::cout << BLUE << " 🦧 🦧 🦧 Wrong Monkey with Copy constructor created " << RESET << std::endl;
 }
 

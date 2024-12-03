@@ -6,14 +6,15 @@
 /*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 12:03:59 by luifer            #+#    #+#             */
-/*   Updated: 2024/12/03 12:35:51 by luifer           ###   ########.fr       */
+/*   Updated: 2024/12/03 13:28:42 by luifer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongCat.hpp"
 
 //Default constructor
-WrongCat::WrongCat() : WrongAnimal(), _type("WrongCat"){
+WrongCat::WrongCat() : WrongAnimal() {
+	this->_type = "WrongCat";
 	std::cout << BLUE << " WrongCat object from default constructor created " << RESET << std::endl;
 }
 
