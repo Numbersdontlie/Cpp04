@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
+/*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 15:41:31 by lperez-h          #+#    #+#             */
-/*   Updated: 2024/12/04 15:53:32 by lperez-h         ###   ########.fr       */
+/*   Updated: 2024/12/04 23:19:25 by luifer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "MateriaSource.hpp"
+#include "AMateria.hpp"
+#include "IMateriaSource.hpp"
 #include "Ice.hpp"
 #include "Cure.hpp"
 
@@ -18,7 +20,7 @@
 MateriaSource::MateriaSource(){
 	for(int i = 0; i < 4; i++)
 		_materias[i] = NULL;
-	std::cout << BLUE << " MateriaSource default created" << RESET << std::endl;
+	std::cout << BLUE << " 🎇 🎇 🎇MateriaSource default created" << RESET << std::endl;
 }
 
 //Copy constructor
@@ -29,7 +31,7 @@ MateriaSource::MateriaSource(const MateriaSource& input){
 		else
 			_materias[i] = input._materias[i]->clone();
 	}
-	std::cout << BLUE << " MateriaSource copy created" << RESET << std::endl;
+	std::cout << BLUE << " 🎇 🎇 🎇MateriaSource copy created" << RESET << std::endl;
 }
 
 //Assignment operator overload
@@ -42,7 +44,7 @@ MateriaSource& MateriaSource::operator=(const MateriaSource& input){
 		else
 			_materias[i] = input._materias[i]->clone();
 	}
-	std::cout << BLUE << " MateriaSource overload operator created " << RESET << std::endl;
+	std::cout << BLUE << " 🎇 🎇 🎇 MateriaSource overload operator created " << RESET << std::endl;
 	return *this;
 }
 
@@ -52,14 +54,14 @@ MateriaSource::~MateriaSource(){
 		if (_materias[i])
 			delete _materias[i];
 	}
-	std::cout << RED << " MateriaSource destroyed" << RESET << std::endl;
+	std::cout << RED << " 💥 💥 💥MateriaSource destroyed" << RESET << std::endl;
 }
 
 //Learn a new materia
-void MateriaSource::learnMateria(AMateria* input){
+void MateriaSource::learnMateria(AMateria* m){
 	for(int i = 0; i < 4; i++){
 		if (!_materias[i]){
-			_materias[i] = input;
+			_materias[i] = m;
 			return;
 		}
 	}
@@ -71,10 +73,15 @@ AMateria* MateriaSource::createMateria(const std::string& type){
 		if (_materias[i] && _materias[i]->getType() == type)
 			return _materias[i]->clone();
 	}
-	if (type == "ice")
-		return new Ice();
-	if (type == "cure")
-		return new Cure();
 	return NULL;
 }
 
+//getter
+const std::string& MateriaSource::getMaterialType(int n) const{
+	//return empty string if invalid
+	static const std::string empty = "";
+	if(n >= 0 && n < 4 && _materias[n]){
+		return _materias[n]->getType();
+	}
+	return (empty);
+}

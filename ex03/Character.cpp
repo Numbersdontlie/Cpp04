@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
+/*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 12:18:31 by lperez-h          #+#    #+#             */
-/*   Updated: 2024/12/04 15:00:35 by lperez-h         ###   ########.fr       */
+/*   Updated: 2024/12/04 22:47:34 by luifer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,14 +75,15 @@ const std::string& Character::getName() const {return (_name); }
 
 //Getter for inventory
 const std::string& Character::getInventory(int n) const {
-	if (idx < 0 || idx > 3){
+	static const std::string empty = "";
+	if (n < 0 || n > 3){
 		std::cout << RED << " Invalid index, provide a right index" << RESET << std::endl;
-		return (NULL);
+		return empty;
 	}
 	if(_inventory[n])
-		return (_inventory[n]);
+		return (_inventory[n]->getType());
 	std::cout << RED << " No materia at this index" << RESET << std::endl;
-	return (NULL);
+	return empty;
 }
 
 //Equip function

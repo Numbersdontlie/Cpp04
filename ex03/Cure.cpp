@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
+/*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 15:00:53 by lperez-h          #+#    #+#             */
-/*   Updated: 2024/12/04 15:16:49 by lperez-h         ###   ########.fr       */
+/*   Updated: 2024/12/04 22:53:18 by luifer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
+#include "ICharacter.hpp"
 
 //Default constructor
 Cure::Cure() : AMateria("cure") {
@@ -18,8 +19,7 @@ Cure::Cure() : AMateria("cure") {
 }
 
 //Copy constructor
-Cure::Cure(const Cure &cure) {
-	_type = cure._type;
+Cure::Cure(const Cure &cure) : AMateria(cure._type) {
 	std::cout << BLUE << " Cure object with type provided created" << RESET << std::endl;
 }
 

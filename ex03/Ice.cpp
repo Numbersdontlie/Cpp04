@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
+/*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 15:17:07 by lperez-h          #+#    #+#             */
-/*   Updated: 2024/12/04 15:22:50 by lperez-h         ###   ########.fr       */
+/*   Updated: 2024/12/04 22:58:25 by luifer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
+#include "ICharacter.hpp"
 
 //Default constructor
 Ice::Ice() : AMateria("ice") {
