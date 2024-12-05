@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 23:53:53 by luifer            #+#    #+#             */
-/*   Updated: 2024/12/03 12:34:17 by luifer           ###   ########.fr       */
+/*   Updated: 2024/12/05 13:20:13 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "Cat.hpp"
 
 //Default constructor
-Cat::Cat() : Animal () {
+Cat::Cat() : Animal() {
 	this->_type = "Cat";
 	std::cout << BLUE << "  🐱‍💻 🐱‍💻 🐱‍💻 Cat with default constructor created " << RESET << std::endl;
 }

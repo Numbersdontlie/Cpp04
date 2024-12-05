@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 00:06:31 by luifer            #+#    #+#             */
-/*   Updated: 2024/12/03 16:05:47 by luifer           ###   ########.fr       */
+/*   Updated: 2024/12/05 13:23:05 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int main(){
 	delete dog2;
 	std::cout << "\n";
 
-	//Testing wrong animal
+	//Testing wrong animals
 	WrongAnimal* wrong1 = new WrongAnimal();
 	WrongAnimal* wrong2 = new WrongCat();
 	std::cout << "\n";

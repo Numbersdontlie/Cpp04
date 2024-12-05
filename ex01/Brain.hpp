@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 16:08:59 by luifer            #+#    #+#             */
-/*   Updated: 2024/12/03 17:04:40 by luifer           ###   ########.fr       */
+/*   Updated: 2024/12/05 14:04:57 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 class Brain
 {
 	private:
-		std::string ideas[100];
+		std::string ideas[50];
 
 	public:
 		Brain();

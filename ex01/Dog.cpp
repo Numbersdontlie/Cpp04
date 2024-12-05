@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 23:14:01 by luifer            #+#    #+#             */
-/*   Updated: 2024/12/03 17:33:29 by luifer           ###   ########.fr       */
+/*   Updated: 2024/12/05 13:41:12 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,9 @@ Dog& Dog::operator=(const Dog& input){
 
 //Destructor
 Dog::~Dog(){
-    delete this->_brain;
     std::cout << RED << " Dog object destroyed 😢 😢 😢 " << RESET << std::endl;
+	delete this->_brain;
+
 }
 
 void Dog::makeSound() const{

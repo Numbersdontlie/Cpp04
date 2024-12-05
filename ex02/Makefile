@@ -2,17 +2,17 @@ BLUE=\e[1;94m
 RED=\e[1;91m
 RESET=\033[0m
 
-NAME = abstract🖼️
+NAME = abstract
 
 CC = c++
 
-CFLAGS = -Wall -Wextra -Werror -Wshadow -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp Brain.cpp
 
 OBJS = $(SRC:.cpp=.o)
 
-%.o: %.cpp Animal.hpp Cat.hpp Dog.hpp Brain.hpp
+%.o: %.cpp 
 	$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)

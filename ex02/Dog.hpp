@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 23:37:49 by luifer            #+#    #+#             */
-/*   Updated: 2024/12/03 11:34:44 by luifer           ###   ########.fr       */
+/*   Updated: 2024/12/05 14:52:02 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <iostream>
 #include <string>
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 #define BLUE "\e[1;94m"
 #define RED "\e[1;91m"
@@ -24,13 +25,18 @@
 
 class Dog : public Animal
 {
-    public:
+    private:
+		Brain* _brain;
+	
+	public:
         Dog();
         Dog(const Dog& input);
         Dog& operator=(const Dog& input);
         ~Dog();
 
         void makeSound() const;
+		void setBrainIdea(std::string idea, int idx);
+		std::string getBrainIdea(int idx) const;
 };
 
 #endif

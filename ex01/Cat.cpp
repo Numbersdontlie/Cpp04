@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 23:53:53 by luifer            #+#    #+#             */
-/*   Updated: 2024/12/03 18:34:07 by luifer           ###   ########.fr       */
+/*   Updated: 2024/12/05 13:41:27 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ Cat& Cat::operator=(const Cat& input){
 
 //Destructor
 Cat::~Cat(){
-	delete this->_brain;
 	std::cout << RED << " 😿 😿 😿 Cat destroyed" << RESET << std::endl;
+	delete this->_brain;
 }
 
 //Make sounds

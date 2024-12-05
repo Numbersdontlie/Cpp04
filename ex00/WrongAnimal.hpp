@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 11:37:29 by luifer            #+#    #+#             */
-/*   Updated: 2024/12/03 12:00:19 by luifer           ###   ########.fr       */
+/*   Updated: 2024/12/05 13:18:44 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ class WrongAnimal : public Animal
 		~WrongAnimal();
 
 		std::string getType() const;
-		virtual void makeSound() const;
+		void makeSound() const;
 };
 
 #endif

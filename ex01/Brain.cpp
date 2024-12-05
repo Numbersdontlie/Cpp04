@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 16:16:37 by luifer            #+#    #+#             */
-/*   Updated: 2024/12/03 17:01:48 by luifer           ###   ########.fr       */
+/*   Updated: 2024/12/05 14:20:26 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Brain::Brain(){
 //Copy constructor for brain
 //it will iterate and copy the ideas of each brain
 Brain::Brain(const Brain& input){
-	for (int i = 0; i < 100; i++){
+	for (int i = 0; i < 50; i++){
 		ideas[i] = input.ideas[i];
 	}
 	std::cout << BLUE << " 🧠 🧠 🧠 Brain copy constructor created" << RESET << std::endl;
@@ -29,7 +29,7 @@ Brain::Brain(const Brain& input){
 //Operator overload constructor
 Brain& Brain::operator=(const Brain& input){
 	if(this != &input){
-		for (int i = 0; i < 100; i++){
+		for (int i = 0; i < 50; i++){
 			ideas[i] = input.ideas[i];
 		}
 	}
@@ -44,13 +44,13 @@ Brain::~Brain(){
 
 //Getter to get ideas of brain
 std::string Brain::getIdeas(int n) const{
-	if(n >= 0 && n <= 99)
+	if(n >= 0 && n <= 49)
 		return (this->ideas[n]);
-	return "index out of scope";
+	return " index out of scope";
 }
 
 //Setter to set ideas of brain
 void Brain::setIdeas(std::string idea, int n){
-	if(n >= 0 && n <= 99)
+	if(n >= 0 && n <= 49)
 		this->ideas[n] = idea;
 }

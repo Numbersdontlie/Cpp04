@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 00:06:31 by luifer            #+#    #+#             */
-/*   Updated: 2024/12/03 16:45:29 by luifer           ###   ########.fr       */
+/*   Updated: 2024/12/05 13:59:37 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 int main(){
 	//Basic test
-	const int num = 20;
+	const int num = 10;
 	Animal* animals[num];
 	std::cout << "\n";
 	
@@ -38,5 +38,52 @@ int main(){
 		animals[i]->makeSound();
 	}
 	std::cout << "\n";
+	for (int i = 0; i < num; i++){
+		delete animals[i];
+	}
+	
+	//Test cat operator overload
+	Cat* meow1 = new Cat;
+	meow1->setBrainIdea("I am a Tiger 🐯", 1);
+	meow1->makeSound();
+	std::cout << GREEN << meow1->getBrainIdea(1) << RESET << std::endl;
+	std::cout << "\n";
+	
+	Cat* meow2 = new Cat();
+	*meow2 = *meow1; 
+	std::cout << GREEN << " 1st cat says:" << meow1->getBrainIdea(1) << RESET << std::endl;
+	std::cout << GREEN << " 2nd cat says:" << meow2->getBrainIdea(1) << RESET << std::endl;
+	std::cout << "\n";
+	std::cout << "\n";
+	delete meow1;
+	delete meow2;
+
+	//Test dog copy constructor
+	Dog* woof1 = new Dog;
+	woof1->setBrainIdea("I am a Wolf 🐺", 2);
+	woof1->makeSound();
+	Dog* woof2 = new Dog(*woof1);
+	std::cout << GREEN << " 1st doggo says:" << woof1->getBrainIdea(2) << RESET << std::endl;
+	std::cout << GREEN << " 2nd doggo says:" << woof2->getBrainIdea(2) << RESET << std::endl;
+	std::cout << "\n";
+	woof1->setBrainIdea("I am a Husky 🐕", 2);
+	std::cout << GREEN << " 1st doggo says:" << woof1->getBrainIdea(2) << RESET << std::endl;
+	std::cout << GREEN << " 2nd doggo says:" << woof2->getBrainIdea(2) << RESET << std::endl;
+	std::cout << "\n";
+	delete woof1;
+	delete woof2;
 	return 0;
 }
+
+/*
+int main() {
+    Dog basic;
+    {
+        Dog tmp = basic;
+    } // tmp goes out of scope and is destroyed
+
+    std::cout << "Back in main scope\n";
+
+    return 0;
+}
+*/
